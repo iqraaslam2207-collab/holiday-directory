@@ -1,0 +1,1325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height:1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2px;
+     display: flex; /*For header layout  */
+    align-items: center; /* For header layout */
+    justify-content: space-between; /* For header layout */
+    height: 70px; /* Example height for header */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2000;
+    
+}
+.navbar .logo {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo i {
+    margin-right: 8px;
+    color: #007bff; /* Example accent color */
+}
+
+.navbar .search-bar-nav {
+    position: relative;
+    margin-left: 0%; /* Adjust spacing */
+    flex-grow: 0.1; /* Takes up some space */
+}
+
+.navbar .search-bar-nav input {
+    border: 1px solid #ddd;
+    padding: 8px 12px 8px 35px; /* Padding for icon */
+    border-radius: 0px;
+    width: 250px;
+    margin-left: 1px;
+    background-color: gainsboro;
+}
+
+.navbar .search-bar-nav i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+
+.navbar .nav-links ul {
+     list-style: none; 
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links ul li {
+    margin-left: 25px;
+}
+
+.navbar .nav-links ul li a {
+    text-decoration: none;
+    color: #a79d9d;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: black;
+}
+
+.navbar .nav-links ul li a i {
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.navbar .add-listing-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .add-listing-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #2c3e50;
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-align: left;
+    color: #fff;
+    margin-top: 70px; /* To account for fixed navbar */
+    
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 100px;
+}
+
+.hero-content .tagline {
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color: #ff69b4; /* Pink color from image */
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.hero-content .search-box {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50px;
+    padding: 10px;
+    max-width: 3000px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 1000px;
+}
+
+.hero-content .search-box input,
+.hero-content .search-box select {
+    border: none;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 55px;
+    font-size: 16px;
+    flex: 1;
+     /* Allows inputs to grow */
+     outline: none;
+}  
+.hero-content .search-box .input-wrapper {
+    position: relative;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.hero-content .search-box .input-wrapper input {
+    width: 100%;
+    margin-right: 0;
+}
+.input-wrapper i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ .hero-content .search-box input:last-of-type,
+.hero-content .search-box select {
+    margin-right: 0;
+} 
+
+.hero-content .search-box select {
+    appearance: none; /* Removes default select arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M10%2012l-6-6h12z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+.hero-content .search-box .search-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    letter-spacing: 2px;
+}
+
+.hero-content .search-box .search-btn:hover {
+    background-color: #0056b3;
+}
+
+/* NEW SECTION: How it Works Styling */
+.how-it-works-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f8f8; /* Light background for the section */
+}
+
+.how-it-works-section .container {
+     display: block;/* Override previous flex, for column layout */
+    height: auto; /* Adjust height for content */
+    align-items: flex-start; /* Reset align-items */
+    justify-content: center; /* Reset justify-content */
+}
+
+.how-it-works-section .section-subtitle {
+    font-size: 14px;
+    color: #ff69b4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 5px;
+}
+
+.how-it-works-section .section-title {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 50px;
+}
+.how-it-works-section .steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between columns */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.how-it-works-section .step-item {
+    flex: 1; /* Allow items to grow/shrink */
+    min-width: 280px; /* Minimum width before wrapping */
+    max-width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 18px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.how-it-works-section .step-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    margin: 0 auto 20px; /* Center and add space below */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px; /* For potential icons */
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.how-it-works-section .step-icon.employee-1 {
+    background: url('images/employee1.jpg') center/cover no-repeat #007bff;
+}
+
+.how-it-works-section .step-icon.employee-2 {
+    background: url('images/employee2.jpg') center/cover no-repeat #007bff;
+}
+
+.how-it-works-section .step-icon.employee-3 {
+    background: url('images/employee3.jpg') center/cover no-repeat #007bff;
+}
+
+.how-it-works-section .step-item:nth-child(1) .step-icon::before {
+    content: "\f002";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.how-it-works-section .step-item:nth-child(2) .step-icon::before {
+    content: "\f023";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.how-it-works-section .step-item:nth-child(3) .step-icon::before {
+    content: "\f274";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* You could add specific icons here later, e.g.: */
+/* .step-item:nth-child(1) .step-icon { background-color: #e6f7ff; } */
+/* .step-item:nth-child(1) .step-icon::before { content: "\f002"; font-family: "Font Awesome 6 Free"; font-weight: 900; } */
+
+
+
+.how-it-works-section .step-item h3 {
+    font-size: 22px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.how-it-works-section .step-item p {
+    font-size: 15px;
+    color: #979595;
+    line-height: 1.8;
+    
+}
+/* NEW SECTION: Our Guides Styling */
+.our-guides-section {
+    padding: 80px 0;
+    background-color: #ffffff; /* White background for this section */
+}
+
+.our-guides-section .container {
+    display: block; /* Override default flex for column layout */
+    height: auto; /* Allow content to dictate height */
+    padding-bottom: 40px; /* Add some space below cards */
+}
+
+.our-guides-section .section-header-guides {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Align the bottom of titles with the "See all" link */
+    margin-bottom: 40px;
+    padding-left: 20px; /* Adjust if needed to align with content */
+    padding-right: 20px; /* Adjust if needed to align with content */
+}
+
+.our-guides-section .section-header-guides .section-subtitle {
+    text-align: left; /* Align subtitle to left */
+    margin-bottom: 5px;
+    padding-left: 0; /* Reset any padding from previous sections */
+    color: #007bff;
+    letter-spacing: 2px;
+    margin-left: 40px;
+}
+
+.our-guides-section .section-header-guides .section-title {
+    text-align: left; /* Align title to left */
+    margin-bottom: 0; /* Remove bottom margin as it's handled by parent */
+    padding-left: 0; /* Reset any padding from previous sections */
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 40px;
+
+}
+
+
+.our-guides-section .see-all-link {
+    text-decoration: none;
+    color: grey; /* Blue color for the link */
+    font-size: small;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    letter-spacing: 0px;
+}
+
+.our-guides-section .see-all-link:hover {
+    text-decoration-line: underline;
+    text-underline-position: below;
+}
+
+.our-guides-section .see-all-link i {
+    font-size: 14px;
+    margin-left: 10px;
+}
+.our-guides-section .guides-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
+
+.our-guides-section .guide-card {
+    width: 220px; /* Fixed width for each card as per image */
+    height: 400px; /* Fixed height for each card */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure image corners are rounded */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-guides-section .guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.our-guides-section .card-image {
+    width: 100%;
+    height: 280px;
+    background-color: #667eea;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #eee;  /* Slight separator */
+}
+
+/* Specific background images for each card - REPLACE WITH YOUR ACTUAL IMAGE PATHS */
+.our-guides-section .card-image.new-york-1 {
+    background-image: url('images/newyork.jpg');
+}
+.our-guides-section .card-image.paris {
+    background-image: url('images/paris.jpg');
+}
+.our-guides-section .card-image.barcelona {
+    background-image: url('images/barcelona.jpg');
+}
+.our-guides-section .card-image.prague {
+    background-image: url('images/prague.jpg');
+}
+.our-guides-section .card-image.new-york-2 {
+    background-image: url('images/newyork2.jpg');
+}
+
+
+.our-guides-section .card-content {
+    padding: 15px;
+    text-align: left;
+    flex-grow: 1; /* Allows content to take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Push content to the bottom */
+}
+
+.our-guides-section .card-content h4 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.our-guides-section .card-content p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* NEW SECTION: Last minute deals Styling */
+.last-minute-deals-section {
+    padding: 80px 0;
+    background-color: #f8f8f8; /* A slightly different background color */
+}
+
+.last-minute-deals-section .container {
+    display: block;
+     /* Override default flex */
+    height: auto;
+    padding-bottom: 40px;
+}
+
+.last-minute-deals-section .section-header-deals {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 50px;
+}
+
+.last-minute-deals-section .section-header-deals .section-subtitle {
+    font-size: 16px;
+    color: #ff69b4; /* Pink color for urgency */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.last-minute-deals-section .section-header-deals .section-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.last-minute-deals-section .see-all-link {
+    text-decoration: none;
+    color:#888;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.last-minute-deals-section .see-all-link:hover {
+    text-decoration-line: underline;
+}
+
+.last-minute-deals-section .see-all-link i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.last-minute-deals-section .deals-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.last-minute-deals-section .deal-card {
+    width: 280px; /* Wider card for deals */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.last-minute-deals-section .deal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.last-minute-deals-section .deal-card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #764ba2;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #eee;
+}
+/* Specific background images for deal cards - REPLACE WITH YOUR ACTUAL IMAGE PATHS */
+.last-minute-deals-section .deal-card-image.deal-image-1 {
+    background-image: url('images/room1.jpg');
+}
+.last-minute-deals-section .deal-card-image.deal-image-2 {
+    background-image: url('images/room2.jpg');
+}
+.last-minute-deals-section .deal-card-image.deal-image-3 {
+    background-image: url('images/room3.jpg');
+}
+.last-minute-deals-section .deal-card-image.deal-image-4 {
+    background-image: url('images/room4.jpg');
+}
+
+.last-minute-deals-section .user-avatar {
+    position: absolute;
+    bottom: -25px; /* Half outside the image */
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff; /* White border around avatar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: lightgray; /* Fallback for avatar */
+    /* The avatar image itself is set inline in HTML for now */
+}
+
+
+.last-minute-deals-section .deal-card-content {
+    padding: 35px 15px 15px; /* Top padding to account for avatar */
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.last-minute-deals-section .deal-card-content h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.last-minute-deals-section .deal-card-content .deal-type {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.last-minute-deals-section .deal-card-content .rating {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+    .last-minute-deals-section .deal-card-content .rating .fas.fa-star {
+    margin-right: 2px;
+}
+
+.last-minute-deals-section .deal-card-content .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Blue for price */
+    margin-top: auto; /* Push price to bottom if content is short */
+}
+
+.last-minute-deals-section .deal-card-content .price .per-night {
+    font-size: 14px;
+    font-weight: normal;
+    color: #888;
+}
+
+
+/* Specific background image for the new hero section */
+.hero-section.new-hero {
+    background-image: url('images/hero2.jpg');
+}
+
+.hero-section.new-hero .hero-content {
+    padding: 100px;
+}
+
+
+
+/* Hide tagline and search box from previous hero design */
+/* .hero-content .tagline,
+.hero-content .search-box {
+    display: none;
+} */
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    /* Ensure text alignment is centered */
+    /* text-align: center; */
+}
+
+.get-started-btn {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+}
+.get-started-btn:hover {
+    background-color: #eee;
+    color: #333;
+}
+
+/* NEW SECTION: Testimonials Styling */
+.testimonials-section {
+    padding: 80px 0;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+}
+
+.testimonials-section .container {
+    display: block; /* Override default flex */
+    height: auto;
+}
+
+.testimonials-section .section-subtitle {
+    font-size: 16px;
+    color: blue;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.testimonials-section .section-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 50px;
+}
+.testimonials-section .testimonial-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between testimonial cards */
+    flex-wrap: wrap; /* Allow cards to wrap */
+}
+
+.testimonials-section .testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    max-width: 500px; /* Max width for each card */
+    min-width: 300px; /* Min width before wrapping */
+    flex: 1; /* Allow cards to grow/shrink */
+    position: relative;
+    padding-top: 50px; /* Space for the quote icon */
+}
+
+.testimonials-section .quote-icon {
+    font-family: serif; /* Use a serif font for the quote */
+    font-size: 100px; /* Large quote icon */
+    color: blue; /* Light gray color */
+    position: absolute;
+    top: -20px; /* Position it above the card */
+    left: 20px;
+    line-height: 1;
+    z-index: 0; /* Behind text */
+}
+.testimonials-section .testimonial-text {
+    font-size: 16px;
+    color: #9c9191;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    position: relative; /* Above quote icon */
+    z-index: 1;
+    font-weight: lighter;
+}
+
+.testimonials-section .customer-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.testimonials-section .customer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: lightgray; /* Placeholder if image fails */
+    border: 2px solid #f0f0f0; /* Slight border around avatar */
+    flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+.testimonials-section .customer-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* NEW SECTION: Travel Blog Styling */
+.travel-blog-section {
+    padding: 80px 0;
+    background-color: #f8f8f8; /* A slightly different background */
+}
+
+.travel-blog-section .container {
+    display: block;
+    height: auto;
+}
+
+.travel-blog-section .section-header-blog {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    padding-left: 90px;
+    padding-right: 20px;
+}
+
+.travel-blog-section .section-header-blog .section-subtitle {
+    font-size: 15px;
+    color: rgb(223, 6, 132);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.travel-blog-section .section-header-blog .section-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.travel-blog-section .see-all-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    font-weight: lighter;
+    font-size: 14px;
+    padding-right: 70px;
+}
+
+.travel-blog-section .see-all-link:hover {
+    text-decoration: underline;
+}
+
+.travel-blog-section .see-all-link i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+.travel-blog-section .blog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between blog cards */
+    flex-wrap: wrap;
+}
+
+.travel-blog-section .blog-card {
+    width: 350px; /* Width for each blog card */
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.travel-blog-section .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.travel-blog-section .blog-card-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f5576c;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #eee;
+}
+/* Specific blog card images - REPLACE WITH YOUR ACTUAL IMAGE PATHS */
+.travel-blog-section .blog-card-image.blog-image-1 {
+    background-image: url('images/travel1.jpg');
+}
+.travel-blog-section .blog-card-image.blog-image-2 {
+    background-image: url('images/travel2.jpg');
+}
+.travel-blog-section .blog-card-image.blog-image-3 {
+    background-image: url('images/travel3.jpg');
+}
+
+
+.travel-blog-section .blog-card-content {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.travel-blog-section .blog-category {
+    font-size: 13px;
+    color: grey; /* Blue for category */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+.travel-blog-section .blog-card-content h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.travel-blog-section .blog-meta {
+    font-size: 15px;
+    color: #b9b4b4;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+}
+
+
+.travel-blog-section .blog-meta i {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.travel-blog-section .blog-excerpt {
+    font-size: 15px;
+    color: #888383;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Allow excerpt to take available space */
+    font-weight: lighter;
+}
+
+.travel-blog-section .read-more-link {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+    align-self: flex-start; /* Align link to the left */
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.travel-blog-section .read-more-link:hover {
+    color: #0056b3;
+}
+
+.travel-blog-section .read-more-link i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* NEW SECTION: Footer Styling */
+.main-footer {
+    background-color: #f5efef; /* Dark background for the footer */
+    color: #746c6c;
+    font-size: 15px;
+}
+
+.footer-top-images {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 100%;
+    overflow: visible;
+}
+
+.footer-image {
+    width: 100%;
+    height: 180px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.footer-image:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    filter: grayscale(0%); /* Remove grayscale on hover */
+    cursor: pointer;
+}
+.footer-content {
+    padding: 60px 0;
+}
+
+.footer-content .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; /* Align columns to the top */
+    height: auto; /* Override default height */
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px; /* Minimum width for columns before wrapping */
+    margin: 20px; /* Space around columns */
+}
+
+.footer-col.footer-about {
+    min-width: 300px; /* Slightly wider for the about section */
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo i {
+    margin-right: 8px;
+    color: #007bff; /* Accent color for logo icon */
+}
+
+.footer-col p {
+    color: #777070;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: #8f8989;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #007bff; /* Accent color on hover */
+    cursor: pointer;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #777070;
+    transition: color 0.3s ease;
+    font-weight: lighter;
+}
+
+.footer-col ul li a:hover {
+    color: #007bff; /* Accent color on hover */
+}
+
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #555;
+    color: #fff;
+    outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #ccc;
+}
+
+.newsletter-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #0056b3;
+}
+
+.footer-bottom {
+    background-color: #222; /* Darker background for the bottom bar */
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Subtle top border */
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.footer-bottom p {
+    color: #bbb;
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+.footer-bottom .payment-methods {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px; /* Space when wrapped */
+}
+
+.footer-bottom .payment-methods i {
+    font-size: 28px;
+    color: #bbb;
+}
+
+/* JavaScript UI: toast, modal, lightbox, scroll animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scroll-animate.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.site-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #333;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 5000;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 320px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.site-toast--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.site-toast--success { background: #198754; }
+.site-toast--error { background: #dc3545; }
+.site-toast--info { background: #007bff; }
+
+.deal-modal,
+.photo-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 4000;
+}
+
+.deal-modal__backdrop,
+.photo-lightbox__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.deal-modal__box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.deal-modal__close,
+.photo-lightbox__close {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+.deal-modal__price {
+    font-size: 24px;
+    color: #007bff;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.deal-modal__book {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.deal-modal__book:hover {
+    background: #0056b3;
+}
+
+.photo-lightbox__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.photo-lightbox__img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    object-fit: contain;
+}
+
+.photo-lightbox__close {
+    top: 20px;
+    right: 24px;
+    color: #fff;
+    z-index: 2;
+}
+
+.photo-lightbox__prev,
+.photo-lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.photo-lightbox__prev { left: 24px; }
+.photo-lightbox__next { right: 24px; }
+
+.photo-lightbox__prev:hover,
+.photo-lightbox__next:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Existing responsive styles... */
+    /* .navbar .nav-links { display: none; } */
+    /* .navbar .search-bar-nav { display: none; } */
+    .container { justify-content: center; }
+    .hero-content h1 { font-size: 40px; }
+    .hero-content .tagline, .hero-content .search-box { display: none; }
+    .get-started-btn { padding: 12px 25px; font-size: 14px; }
+    .how-it-works-section .section-title { font-size: 28px; margin-bottom: 30px; }
+    .how-it-works-section .steps-container { flex-direction: column; align-items: center; }
+    .how-it-works-section .step-item { max-width: 90%; }
+    .our-guides-section .section-header-guides { flex-direction: column; align-items: flex-start; text-align: left; margin-bottom: 30px; }
+  .our-guides-section .see-all-link { margin-top: 15px; }
+    .our-guides-section .guides-grid { flex-direction: column; align-items: center; }
+    .our-guides-section .guide-card { width: 90%; max-width: 300px; height: auto; }
+    .our-guides-section .card-image { height: 200px; }
+    .last-minute-deals-section .section-header-deals { flex-direction: column; align-items: flex-start; text-align: left; margin-bottom: 30px; }
+    .last-minute-deals-section .see-all-link { margin-top: 15px; }
+    .last-minute-deals-section .deals-grid { flex-direction: column; align-items: center; }
+    .last-minute-deals-section .deal-card { width: 90%; max-width: 350px; }
+    .testimonials-section .section-title { font-size: 28px; margin-bottom: 30px; }
+    .testimonials-section .testimonial-cards-container { flex-direction: column; align-items: center; }
+    .testimonials-section .testimonial-card { max-width: 90%; }
+    .travel-blog-section .section-header-blog { flex-direction: column; align-items: flex-start; text-align: left; margin-bottom: 30px; }
+    .travel-blog-section .see-all-link { margin-top: 15px; }
+ .travel-blog-section .blog-grid { flex-direction: column; align-items: center; }
+    .travel-blog-section .blog-card { width: 90%; max-width: 350px; }
+    .travel-blog-section .blog-card-image { height: 180px; }
+
+    /* Footer responsiveness */
+    .footer-top-images {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-image {
+        height: 140px;
+    }
+    .footer-content .container {
+        flex-direction: column; /* Stack footer columns */
+        align-items: center;
+    }
+    .footer-col {
+        margin: 20px 0; /* Adjust margin for stacked columns */
+        text-align: center;
+    }
+    .footer-col.footer-about,
+    .footer-col.footer-links,
+    .footer-col.footer-newsletter {
+        min-width: unset; /* Remove min-width for stacking */
+        width: 90%; /* Max width for stacked columns */
+        max-width: 400px;
+    }
+ .footer-logo,
+    .social-icons {
+        justify-content: center; /* Center content in stacked columns */
+    }
+    .footer-bottom .container {
+        flex-direction: column; /* Stack bottom content */
+        text-align: center;
+    }
+    .footer-bottom p {
+        margin-bottom: 10px;
+    }
+    .footer-bottom .payment-methods {
+        justify-content: center;
+    }
+}
+
+    
