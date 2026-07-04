@@ -1,0 +1,315 @@
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 0.875rem 1.75rem;
+  background: var(--color-route-red);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: var(--color-route-red-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-compass-gold);
+  color: var(--color-compass-gold);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-pill);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-outline:hover {
+  background: var(--color-compass-gold);
+  color: var(--color-atlas-navy);
+}
+
+.see-all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-atlas-navy);
+  transition: color var(--transition-fast);
+}
+
+.see-all-link:hover {
+  color: var(--color-route-red);
+}
+
+.see-all-link i:last-child {
+  font-size: 0.65em;
+  opacity: 0.6;
+}
+
+/* Toasts */
+.site-toast,
+.auth-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: var(--z-toast);
+  box-shadow: var(--shadow-lg);
+  max-width: 360px;
+}
+
+.site-toast--visible,
+.auth-toast--show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-toast--success,
+.auth-toast--success { background: var(--color-trail-green); }
+.site-toast--error,
+.auth-toast--error { background: var(--color-route-red); }
+.site-toast--info,
+.auth-toast--info { background: var(--color-atlas-navy); }
+
+/* Deal modal */
+.deal-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+}
+
+.deal-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 33, 61, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.deal-modal__box {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  max-width: 440px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  border-top: 4px solid var(--color-compass-gold);
+}
+
+.deal-modal__close {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-ink-muted);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
+}
+
+.deal-modal__close:hover {
+  background: var(--color-parchment);
+}
+
+.deal-modal__box h3 {
+  margin-bottom: var(--space-md);
+  padding-right: var(--space-xl);
+}
+
+.deal-modal__price {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-compass-gold);
+  margin-bottom: var(--space-xl);
+}
+
+.deal-modal__book {
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--color-route-red);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: var(--text-base);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.deal-modal__book:hover {
+  background: var(--color-route-red-hover);
+}
+
+/* Photo lightbox */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 33, 61, 0.92);
+}
+
+.photo-lightbox__content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+}
+
+.photo-lightbox__img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.photo-lightbox__close,
+.photo-lightbox__prev,
+.photo-lightbox__next {
+  position: absolute;
+  color: var(--color-white);
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  transition: background var(--transition-fast);
+}
+
+.photo-lightbox__close:hover,
+.photo-lightbox__prev:hover,
+.photo-lightbox__next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.photo-lightbox__close {
+  top: -56px;
+  right: 0;
+  font-size: 1.75rem;
+}
+
+.photo-lightbox__prev { left: -60px; top: 50%; transform: translateY(-50%); }
+.photo-lightbox__next { right: -60px; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 768px) {
+  .photo-lightbox__prev { left: 8px; }
+  .photo-lightbox__next { right: 8px; }
+  .photo-lightbox__close { top: 8px; right: 8px; }
+}
+
+/* Rating stars */
+.rating {
+  color: var(--color-compass-gold);
+  font-size: var(--text-sm);
+  margin: var(--space-sm) 0;
+}
+
+.rating i {
+  margin-right: 2px;
+}
+
+.price {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-atlas-navy);
+}
+
+.price .per-night {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-ink-muted);
+}
+
+/* Route line SVG */
+.route-line-container {
+  position: fixed;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  pointer-events: none;
+  z-index: var(--z-route-line);
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .route-line-container {
+    display: block;
+  }
+}
+
+.route-line-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.route-line-path {
+  fill: none;
+  stroke: var(--color-compass-gold);
+  stroke-width: 2;
+  stroke-dasharray: 8 6;
+  opacity: 0.4;
+}
+
+.route-pin {
+  fill: var(--color-route-red);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.route-pin.is-active {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-line-path {
+    stroke-dasharray: none;
+    opacity: 0.3;
+  }
+
+  .route-pin {
+    opacity: 0.6;
+  }
+}

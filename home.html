@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Directory — Stay Like a Local</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- Atlas route line (signature element) -->
+    <div class="route-line-container" aria-hidden="true">
+        <svg class="route-line-svg" viewBox="0 0 60 800" preserveAspectRatio="none">
+            <path class="route-line-path" id="routePath" d="M30,40 L30,180 Q30,220 30,260 L30,400 Q30,440 30,480 L30,620 Q30,660 30,700 L30,760" />
+            <circle class="route-pin" data-section="how-it-works" cx="30" cy="180" r="6" />
+            <circle class="route-pin" data-section="guides" cx="30" cy="400" r="6" />
+            <circle class="route-pin" data-section="deals" cx="30" cy="480" r="6" />
+            <circle class="route-pin" data-section="testimonials" cx="30" cy="620" r="6" />
+            <circle class="route-pin" data-section="blog" cx="30" cy="700" r="6" />
+        </svg>
+    </div>
+
+    <header class="navbar" role="banner">
+        <div class="navbar-layout">
+            <div class="navbar-top-row">
+                <a href="#home" class="logo">
+                    <i class="fas fa-compass" aria-hidden="true"></i> DIRECTORY
+                </a>
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="search-bar-nav">
+                <label for="nav-search" class="sr-only">Search destinations</label>
+                <input type="search" id="nav-search" placeholder="Search destinations">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </div>
+            <nav class="nav-links" aria-label="Main navigation">
+                <ul>
+                    <li class="nav-dropdown">
+                        <a href="#home" class="nav-dropdown-toggle">Explore <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="#how-it-works">How it works</a></li>
+                            <li><a href="#guides">City guides</a></li>
+                            <li><a href="#deals">Last-minute deals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#testimonials" class="nav-dropdown-toggle">Stories <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#blog">Travel blog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="nav-dropdown">
+                        <a href="sign-in.html" class="nav-dropdown-toggle">Account <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="sign-in.html">Sign in</a></li>
+                            <li><a href="sign-up.html">Create account</a></li>
+                        </ul>
+                    </li>
+                    <li><button type="button" class="add-listing-btn">List your place</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <p class="tagline" data-motion="hero">Book places locals actually stay</p>
+                <h1 id="hero-heading" data-motion="hero">Stay like a local</h1>
+                <div class="search-box" data-motion="hero" role="search">
+                    <input type="text" placeholder="What are you looking for?" aria-label="Search keyword">
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Location" aria-label="Location">
+                        <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+                    </div>
+                    <select aria-label="Property category">
+                        <option value="">Categories</option>
+                        <option value="rooms">Rooms</option>
+                        <option value="apartments">Apartments</option>
+                        <option value="houses">Houses</option>
+                        <option value="villas">Villas</option>
+                    </select>
+                    <button type="button" class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works-section" aria-labelledby="how-heading">
+            <div class="container">
+                <p class="section-subtitle">One-of-a-kind vacation rentals</p>
+                <h2 id="how-heading" class="section-title">Three steps to your next trip</h2>
+                <div class="steps-container">
+                    <article class="step-item">
+                        <div class="step-icon employee-1" aria-hidden="true"></div>
+                        <h3>Find the perfect rental</h3>
+                        <p>Browse curated homes, apartments, and rooms in neighborhoods locals love — not tourist traps.</p>
+                    </article>
+                    <article class="step-item">
+                        <div class="step-icon employee-2" aria-hidden="true"></div>
+                        <h3>Book with confidence</h3>
+                        <p>Every listing is verified. Read real reviews, see exact photos, and know your total before you pay.</p>
+                    </article>
+                    <article class="step-item">
+                        <div class="step-icon employee-3" aria-hidden="true"></div>
+                        <h3>Arrive and belong</h3>
+                        <p>Check in, unpack, and live like a local. Your host shares the spots guidebooks miss.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="guides" class="our-guides-section" aria-labelledby="guides-heading">
+            <div class="container">
+                <div class="section-header-guides">
+                    <div>
+                        <p class="section-subtitle">Stay and eat like a local</p>
+                        <h2 id="guides-heading" class="section-title">City guides</h2>
+                    </div>
+                    <a href="#" class="see-all-link">See all guides <i class="fas fa-chevron-right" aria-hidden="true"></i><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="guides-carousel guides-grid" role="list">
+                    <article class="guide-card" role="listitem">
+                        <div class="card-image new-york-1" role="img" aria-label="New York skyline"></div>
+                        <div class="card-content">
+                            <h4>New York</h4>
+                            <p>The city that never sleeps</p>
+                        </div>
+                    </article>
+                    <article class="guide-card" role="listitem">
+                        <div class="card-image paris" role="img" aria-label="Paris streets"></div>
+                        <div class="card-content">
+                            <h4>Paris</h4>
+                            <p>Artist capital of Europe</p>
+                        </div>
+                    </article>
+                    <article class="guide-card" role="listitem">
+                        <div class="card-image barcelona" role="img" aria-label="Barcelona architecture"></div>
+                        <div class="card-content">
+                            <h4>Barcelona</h4>
+                            <p>Gaudí, tapas, and the Gothic Quarter</p>
+                        </div>
+                    </article>
+                    <article class="guide-card" role="listitem">
+                        <div class="card-image prague" role="img" aria-label="Prague old town"></div>
+                        <div class="card-content">
+                            <h4>Prague</h4>
+                            <p>City of a hundred spires</p>
+                        </div>
+                    </article>
+                    <article class="guide-card" role="listitem">
+                        <div class="card-image new-york-2" role="img" aria-label="Brooklyn neighborhood"></div>
+                        <div class="card-content">
+                            <h4>Brooklyn</h4>
+                            <p>Beyond Manhattan</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="deals" class="last-minute-deals-section" aria-labelledby="deals-heading">
+            <div class="container">
+                <div class="section-header-deals">
+                    <div>
+                        <p class="section-subtitle">Hurry — these expire soon</p>
+                        <h2 id="deals-heading" class="section-title">Last-minute deals</h2>
+                    </div>
+                    <a href="#" class="see-all-link">See all deals <i class="fas fa-chevron-right" aria-hidden="true"></i><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="deals-grid">
+                    <article class="deal-card">
+                        <div class="deal-card-image deal-image-1">
+                            <div class="user-avatar" style="background-image: url('images/client1.jpg');"></div>
+                        </div>
+                        <div class="deal-card-content">
+                            <h4>Modern, Well-Appointed Room</h4>
+                            <p class="deal-type">Private room</p>
+                            <div class="rating" aria-label="5 stars">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                            <p class="price">$80 <span class="per-night">per night</span></p>
+                        </div>
+                    </article>
+                    <article class="deal-card">
+                        <div class="deal-card-image deal-image-2">
+                            <div class="user-avatar" style="background-image: url('images/client2.jpg');"></div>
+                        </div>
+                        <div class="deal-card-content">
+                            <h4>Cute Quirky Garden Apt, NYC Adjacent</h4>
+                            <p class="deal-type">Entire apartment</p>
+                            <div class="rating" aria-label="5 stars">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                            <p class="price">$121 <span class="per-night">per night</span></p>
+                        </div>
+                    </article>
+                    <article class="deal-card">
+                        <div class="deal-card-image deal-image-3">
+                            <div class="user-avatar" style="background-image: url('images/client3.jpg');"></div>
+                        </div>
+                        <div class="deal-card-content">
+                            <h4>Modern Apt — Vibrant Neighborhood</h4>
+                            <p class="deal-type">Entire apartment</p>
+                            <div class="rating" aria-label="5 stars">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                            <p class="price">$75 <span class="per-night">per night</span></p>
+                        </div>
+                    </article>
+                    <article class="deal-card">
+                        <div class="deal-card-image deal-image-4">
+                            <div class="user-avatar" style="background-image: url('images/client4.jpg');"></div>
+                        </div>
+                        <div class="deal-card-content">
+                            <h4>Sunny Private Studio-Apartment</h4>
+                            <p class="deal-type">Shared room</p>
+                            <div class="rating" aria-label="5 stars">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                            </div>
+                            <p class="price">$93 <span class="per-night">per night</span></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="get-started" class="hero-section new-hero" aria-labelledby="cta-heading">
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h2 id="cta-heading">Ready for your next holiday?</h2>
+                <button type="button" class="get-started-btn">Get started</button>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-heading">
+            <div class="container">
+                <p class="section-subtitle">Testimonials</p>
+                <h2 id="testimonials-heading" class="section-title">What travelers say about us</h2>
+                <div class="testimonial-cards-container">
+                    <blockquote class="testimonial-card">
+                        <div class="quote-icon" aria-hidden="true">"</div>
+                        <p class="testimonial-text">We skipped the hotel district entirely and found a flat in Le Marais. The host's restaurant list was worth the trip alone.</p>
+                        <footer class="customer-info">
+                            <div class="customer-avatar" style="background-image: url('images/client1.jpg');" role="img" aria-label="Jessica Watson"></div>
+                            <cite class="customer-name">Jessica Watson</cite>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="testimonial-card">
+                        <div class="quote-icon" aria-hidden="true">"</div>
+                        <p class="testimonial-text">Booked a last-minute deal in Barcelona. Same price as a hostel, but with a kitchen and a rooftop terrace.</p>
+                        <footer class="customer-info">
+                            <div class="customer-avatar" style="background-image: url('images/client2.jpg');" role="img" aria-label="Michael Chen"></div>
+                            <cite class="customer-name">Michael Chen</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="travel-blog-section" aria-labelledby="blog-heading">
+            <div class="container">
+                <div class="section-header-blog">
+                    <div>
+                        <p class="section-subtitle">Stories from around the globe</p>
+                        <h2 id="blog-heading" class="section-title">From our travel blog</h2>
+                    </div>
+                    <a href="#" class="see-all-link">See all articles <i class="fas fa-chevron-right" aria-hidden="true"></i><i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <div class="blog-card-image blog-image-1" role="img" aria-label="Autumn travel"></div>
+                        <div class="blog-card-content">
+                            <p class="blog-category">Travel</p>
+                            <h4>Five neighborhoods worth getting lost in</h4>
+                            <div class="blog-meta">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <time class="blog-date" datetime="2026-03-12">March 12, 2026</time>
+                                <span>· 6 min read</span>
+                            </div>
+                            <p class="blog-excerpt">Skip the main square. These five districts reward wandering without a map.</p>
+                            <a href="#" class="read-more-link">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-card-image blog-image-2" role="img" aria-label="Local food market"></div>
+                        <div class="blog-card-content">
+                            <p class="blog-category">Living</p>
+                            <h4>How to eat like a local on any budget</h4>
+                            <div class="blog-meta">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <time class="blog-date" datetime="2026-02-28">February 28, 2026</time>
+                                <span>· 4 min read</span>
+                            </div>
+                            <p class="blog-excerpt">Markets, lunch menus, and the one question to ask your host.</p>
+                            <a href="#" class="read-more-link">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card">
+                        <div class="blog-card-image blog-image-3" role="img" aria-label="Travel photography"></div>
+                        <div class="blog-card-content">
+                            <p class="blog-category">Travel</p>
+                            <h4>Packing light for a two-week stay</h4>
+                            <div class="blog-meta">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <time class="blog-date" datetime="2026-01-15">January 15, 2026</time>
+                                <span>· 5 min read</span>
+                            </div>
+                            <p class="blog-excerpt">One carry-on, four climates. What to bring and what laundromats are for.</p>
+                            <a href="#" class="read-more-link">Read more <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="main-footer">
+        <div class="footer-top-images">
+            <div class="footer-image" data-index="0" style="background-image: url('images/footer1.jpg');" role="img" aria-label="Travel photo 1" tabindex="0"></div>
+            <div class="footer-image" data-index="1" style="background-image: url('images/footer2.jpg');" role="img" aria-label="Travel photo 2" tabindex="0"></div>
+            <div class="footer-image" data-index="2" style="background-image: url('images/footer3.jpg');" role="img" aria-label="Travel photo 3" tabindex="0"></div>
+            <div class="footer-image" data-index="3" style="background-image: url('images/footer4.jpg');" role="img" aria-label="Travel photo 4" tabindex="0"></div>
+            <div class="footer-image" data-index="4" style="background-image: url('images/footer5.jpg');" role="img" aria-label="Travel photo 5" tabindex="0"></div>
+            <div class="footer-image" data-index="5" style="background-image: url('images/footer6.jpg');" role="img" aria-label="Travel photo 6" tabindex="0"></div>
+        </div>
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">DIRECTORY</div>
+                    <p>Curated vacation rentals in neighborhoods locals call home. Book with confidence, travel with purpose.</p>
+                    <div class="social-icons" role="list" aria-label="Social media">
+                        <i class="fab fa-facebook-f" role="listitem" tabindex="0" aria-label="Facebook"></i>
+                        <i class="fab fa-twitter" role="listitem" tabindex="0" aria-label="Twitter"></i>
+                        <i class="fab fa-pinterest-p" role="listitem" tabindex="0" aria-label="Pinterest"></i>
+                        <i class="fab fa-instagram" role="listitem" tabindex="0" aria-label="Instagram"></i>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h3>Rentals</h3>
+                    <ul>
+                        <li><a href="#">Rooms</a></li>
+                        <li><a href="#">Apartments</a></li>
+                        <li><a href="#">Houses</a></li>
+                        <li><a href="#">Villas</a></li>
+                        <li><a href="#">Room detail</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#how-it-works">How it works</a></li>
+                        <li><a href="#guides">City guides</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-newsletter">
+                    <h3>Daily offers</h3>
+                    <p>Get last-minute deals and new listings in your inbox.</p>
+                    <form class="newsletter-form">
+                        <label for="newsletter-email" class="sr-only">Email address</label>
+                        <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Holiday Directory. All rights reserved.</p>
+                <div class="payment-methods" aria-label="Accepted payment methods">
+                    <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                    <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                    <i class="fab fa-cc-paypal" aria-hidden="true"></i>
+                    <i class="fab fa-cc-discover" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
