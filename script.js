@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   initNavbar();
+  initMobileMenu();
   initHeroSection();
   initGuides();
   initDeals();
@@ -108,6 +109,32 @@ function initNavbar() {
       showToast('Add listing form coming soon!', 'info');
     });
   }
+}
+
+function initMobileMenu() {
+  const navbar = document.querySelector('.navbar');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (!navbar || !menuToggle || !navLinks) return;
+
+  menuToggle.addEventListener('click', function() {
+    navbar.classList.toggle('menu-open');
+  });
+
+  navLinks.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (!this.classList.contains('nav-dropdown-toggle')) {
+        navbar.classList.remove('menu-open');
+      }
+    });
+  });
+
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      navbar.classList.remove('menu-open');
+    }
+  });
 }
 
 function initHeroSection() {
