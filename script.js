@@ -33,18 +33,66 @@ function showToast(message, type) {
 
 function initNavbar() {
   const searchInput = document.querySelector('.search-bar-nav input');
-  const navLinks = document.querySelectorAll('.nav-links a');
   const addListingBtn = document.querySelector('.add-listing-btn');
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  const navbar = document.querySelector('.navbar');
 
-  navLinks.forEach(function(link) {
+  function closeAllDropdowns() {
+    dropdowns.forEach(function(dropdown) {
+      dropdown.classList.remove('open');
+    });
+  }
+
+  function scrollToSection(selector) {
+    const target = document.querySelector(selector);
+    if (!target) return;
+
+    const navbarHeight = navbar ? navbar.offsetHeight : 70;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+    window.scrollTo({ top: top, behavior: 'smooth' });
+    closeAllDropdowns();
+  }
+
+  dropdowns.forEach(function(dropdown) {
+    const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+
+    if (toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isOpen = dropdown.classList.contains('open');
+        closeAllDropdowns();
+        if (!isOpen) dropdown.classList.add('open');
+      });
+    }
+
+    dropdown.querySelectorAll('.nav-dropdown-menu a').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          scrollToSection(href);
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll('.nav-links > ul > li > a:not(.nav-dropdown-toggle)').forEach(function(link) {
     link.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
       if (href && href.startsWith('#')) {
         e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
+        scrollToSection(href);
       }
     });
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-dropdown')) closeAllDropdowns();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAllDropdowns();
   });
 
   if (searchInput) {

@@ -19,19 +19,39 @@
             </div>
             <nav class="nav-links">
                 <ul>
-                    <li><a href="#">Home <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">Template <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Docs <i class="fas fa-chevron-down"></i></a></li>
+                    <li class="nav-dropdown">
+                        <a href="#home" class="nav-dropdown-toggle">Home <i class="fas fa-chevron-down"></i></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="#home">Hero Section</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#guides">Our Guides</a></li>
+                            <li><a href="#deals">Last Minute Deals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#testimonials" class="nav-dropdown-toggle">Template <i class="fas fa-chevron-down"></i></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#get-started">Get Started</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#blog" class="nav-dropdown-toggle">Docs <i class="fas fa-chevron-down"></i></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="#blog">Travel Blog</a></li>
+                            <li><a href="#contact">Footer & Newsletter</a></li>
+                        </ul>
+                    </li>
                     <li><a href="website build.html">Sign in</a></li>
-                    <li><a href="#">Sign up</a></li>
+                    <li><a href="sign-up.html">Sign up</a></li>
                     <li><button class="add-listing-btn">ADD A LISTING</button></li>
                 </ul>
-                 </nav>
+            </nav>
         </div>
     </header>
 
-<main class="hero-section">
+<main id="home" class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <p class="tagline">THE BEST HOLIDAY EXPERIENCE</p>
@@ -54,7 +74,7 @@
             </div>
         </div>
         </main>
-<section class="how-it-works-section">
+<section id="how-it-works" class="how-it-works-section">
             <div class="container">
                 <p class="section-subtitle">ONE-OF-A-KIND VACATION RENTALS</p>
                 <h2 class="section-title">Booking with us is easy</h2>
@@ -78,7 +98,7 @@
                 </div>
             </div>
         </section>
-                <section class="our-guides-section">
+                <section id="guides" class="our-guides-section">
             <div class="container">
                 <div class="section-header-guides">
                     <div>
@@ -128,7 +148,7 @@
             </div>
         </section>
 
-        <section class="last-minute-deals-section">
+        <section id="deals" class="last-minute-deals-section">
             <div class="container">
                 <div class="section-header-deals">
                     <div>
@@ -216,7 +236,7 @@
             </div>
         </section>
 
-        <section class="hero-section new-hero">
+        <section id="get-started" class="hero-section new-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1>Ready for your next holidays?</h1>
@@ -224,7 +244,7 @@
             </div>
         </section>
 
-        <section class="testimonials-section">
+        <section id="testimonials" class="testimonials-section">
             <div class="container">
                 <p class="section-subtitle">TESTIMONIALS</p>
                 <h2 class="section-title">Our dear customers said about us</h2>
@@ -250,7 +270,7 @@
             </div>
         </section>
 
-        <section class="travel-blog-section">
+        <section id="blog" class="travel-blog-section">
             <div class="container">
                 <div class="section-header-blog">
                     <div>
@@ -304,7 +324,7 @@
                 </div>
             </div>
             </section>
-                     <footer class="main-footer">
+                     <footer id="contact" class="main-footer">
         <div class="footer-top-images">
             <div class="footer-image" data-index="0" style="background-image: url('images/footer1.jpg');"></div>
             <div class="footer-image" data-index="1" style="background-image: url('images/footer2.jpg');"></div>
