@@ -533,6 +533,20 @@
   background-position: center;
 }
 
+.user-avatar--initials,
+.customer-avatar--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-atlas-navy);
+  background-image: none;
+  background-color: var(--color-compass-gold);
+  letter-spacing: -0.02em;
+}
+
 .deal-card-content {
   padding: var(--space-xl) var(--space-lg) var(--space-lg);
   padding-top: calc(var(--space-lg) + 8px);
@@ -604,6 +618,7 @@
   background-size: cover;
   background-position: center;
   background-color: var(--color-atlas-navy-light);
+  flex-shrink: 0;
 }
 
 .customer-name {
